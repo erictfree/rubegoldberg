@@ -5,9 +5,15 @@ Build one scene of a shared Rube Goldberg machine using p5.js and Matter.js. Eac
 ## Get started
 
 1. Download this repository using **Code → Download ZIP**, then extract it, or clone the repository.
-2. Open [brief.md](brief.md) and fill in the **My scene** section.
-3. Give your AI assistant the completed brief and access to this project folder. The brief explains what to build, the shared rules, and how to test it.
-4. Open `index.html` in a browser to run your scene. Click once for sound.
+2. Open the project folder in your AI assistant and ask it to read [brief.md](brief.md).
+3. The assistant will invite you to describe the scene you want. Describe it in your own words; it will ask follow-up questions as needed to understand your idea and fit the shared rules.
+4. The assistant builds your scene and adds it to `index.html`. Open `index.html` in a browser to run it. Click once for sound.
+
+You can start with:
+
+> Read brief.md and guide me through creating my Rube Goldberg scene.
+
+There is no worksheet to fill in. The brief instructs the assistant to start with your description, clarify what is missing, and build the scene in small steps with you.
 
 All required libraries and background music are included. No package installation or build step is needed. If your scene loads images or fonts, use a local web server as described in the brief.
 

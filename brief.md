@@ -1,6 +1,6 @@
 # Scene brief — Class Rube Goldberg Machine
 
-**How to use this.** Fill in the "My scene" section in your own words. Then give this whole file to your AI assistant, in a mode where it can read and edit the files in the project folder. Open `index.html` in a browser to run it.
+**How to use this.** Give this whole file to your AI assistant, in a mode where it can read and edit the files in the project folder. Ask it to read the brief and guide you through creating your scene. It will invite you to describe what you want and ask follow-up questions as needed. You do not need to fill in or edit this file. Open `index.html` in a browser to run the scene it builds with you.
 
 You do not set anything up by hand. Your assistant creates your scene file and adds it to `index.html` as part of the build.
 
@@ -14,17 +14,20 @@ Every student builds one scene. The same ball travels through all of them: it en
 
 Before you write any code, read `machine.js`, which is the shared template, and one or two of the finished scenes in `scenes/`. Use those scenes to learn how a scene is put together. Do not treat them as the style to imitate.
 
-## My scene
+## Start with a conversation
 
-- **Scene name** (lowercase letters and digits, no spaces; this becomes the file name):
-- **The world** (where are we, and what is this place like?):
-- **Visual style:**
-- **Physics** (believable mechanisms only, or is magic allowed?):
-- **Two or three mechanisms I want the ball to go through:**
-- **What happens when the ball hits things:**
-- **Sound:**
+Read this whole brief before asking me anything. If I have not already described my scene, invite me to describe it in my own words. For example: "What kind of world should the ball travel through, and what would you like to happen along the way?" Do not ask me to complete a form or fill in this file.
 
-If any of these are blank or vague, ask me about them before you start. Ask one or two questions at a time.
+Use my description and anything I have already told you to understand:
+
+- The world and its visual style.
+- Whether the physics should be believable or can include magic.
+- Two or three mechanisms the ball should go through.
+- How the world reacts when the ball hits things, including sound.
+
+Ask follow-up questions only where something is missing or unclear and the answer would affect the scene. Ask one or two questions at a time; do not repeat questions I have already answered or turn the conversation into a questionnaire. Help me develop an incomplete idea, and explain any conflicts with the shared contract below.
+
+Suggest a short scene name using lowercase letters and digits for the file name, and ask what name I want in the scene's author credit if you do not already know it. Once you understand enough to begin, briefly describe the scene you will build and start with the bare mechanisms, following "How I want to work" below. Refine the details with me as we go.
 
 ## What is up to me
 

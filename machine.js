@@ -308,7 +308,7 @@ function setup() {
     textSize(26);
     text('No scene yet.', SPEC.W / 2, SPEC.H / 2 - 26);
     textSize(18);
-    text('Fill in "My scene" in brief.md and give the file to your AI assistant.', SPEC.W / 2, SPEC.H / 2 + 18);
+    text('Ask your AI assistant to read brief.md and help you describe your scene.', SPEC.W / 2, SPEC.H / 2 + 18);
     noLoop();
     return;
   }
