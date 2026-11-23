@@ -1,6 +1,8 @@
 # Scene brief — Class Rube Goldberg Machine
 
-**How to use this.** Give this whole file to your AI assistant, in a mode where it can read and edit the files in the project folder. Ask it to read the brief and guide you through creating your scene. It will invite you to describe what you want and ask follow-up questions as needed. You do not need to fill in or edit this file. Open `index.html` in a browser to run the scene it builds with you. Watch it, tell the assistant what you want to change, then refresh and watch its revision. Repeat until you have the scene you want and it meets the shared rules.
+**How to use this.** Open this project in VS Code and give this whole file to your AI assistant, in a mode where it can read and edit the project files. Ask it to read the brief and guide you through creating your scene. It will invite you to describe what you want and ask follow-up questions as needed. You do not need to fill in or edit this file.
+
+Run `index.html` using **Live Server in VS Code**. Watch the preview, tell the assistant what you want to change, then watch its revision in the same Live Server preview. Refresh if needed. Repeat until you have the scene you want and it meets the shared rules.
 
 You do not set anything up by hand. Your assistant creates your scene file and adds it to `index.html` as part of the build.
 
@@ -207,16 +209,16 @@ This passes as written, at 8.6 seconds, which is near the short end of the windo
 
 ## How I want to work
 
-- **You cannot see the canvas, and I can.** After each change, tell me which URL to open and what I should see. I will tell you what happened. If you can open a browser yourself, run it and check before you tell me it works.
+- **You cannot see the canvas, and I can.** After each change, tell me what I should see in the Live Server preview. I will tell you what happened. If you can open a browser yourself, check the scene through Live Server before you tell me it works.
 - **Work in small steps.** First get the ball from the pipe to the catch zone with bare mechanisms, and check the time. Then build the look. Then add reactions and sound. Do not write the whole scene in one go.
-- **Keep iterating with me.** The first working version is a starting point. After each version, invite me to watch it and say what I like and what I want changed. Revise it from my feedback, have me refresh and watch again, and repeat until I am happy with the scene and it meets the shared rules. My feedback can change the original idea as well as its details. A passing test alone does not mean we are finished.
+- **Keep iterating with me.** The first working version is a starting point. After each version, invite me to watch it in Live Server and say what I like and what I want changed. Revise it from my feedback, have me watch the updated preview and refresh if needed, and repeat until I am happy with the scene and it meets the shared rules. My feedback can change the original idea as well as its details. A passing test alone does not mean we are finished.
 - **Make layout easy to tune.** Put the positions and sizes I am likely to adjust in named constants at the top of the file, as the starter scene does. If we are going back and forth on coordinates, stop guessing and ask me to read them off the debug view.
 - **Explain what I will have to explain.** When you use a physics technique that is not in the starter scene, tell me in two or three sentences what it does and why you chose it. I have to be able to explain my scene in class.
 - **Tell me when my idea has a problem.** If a mechanism is unlikely to work, or will not fit in the time, say so and suggest the closest thing that will.
 
 ## Testing
 
-Open `index.html` in a browser. A scene drawn entirely in code runs straight from the file; one that loads images needs a local server, such as Live Server in VS Code or `python3 -m http.server`.
+In VS Code, right-click `index.html` and choose **Open with Live Server**. Keep Live Server running while you build and revise your scene, and use its browser preview for every test. Refresh the preview if a revision has not appeared.
 
 **If my scene is the only one loaded,** it runs in test mode automatically. A readout at the bottom left shows the time, and the result of the last run: PASS, or what went wrong.
 
@@ -251,7 +253,7 @@ Check the readout after every change. Small layout changes can strand the ball.
 
 ## Done means
 
-- I have watched the scene in the browser and am happy with its look, movement, mechanisms, reactions, and sound.
+- I have watched the scene in the Live Server preview and am happy with its look, movement, mechanisms, reactions, and sound.
 - In test mode the scene ends with PASS, with the same time on every run, and never LOST or STUCK.
 - The browser console shows no errors, including after a restart.
 - The scene's line is in `index.html`, and that is the only change there.
