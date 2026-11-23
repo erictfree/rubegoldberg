@@ -16,6 +16,16 @@ Every student builds one scene. The same ball travels through all of them: it en
 
 Before you write any code, read `machine.js`, which is the shared template, and one or two of the finished scenes in `scenes/`. Use those scenes to learn how a scene is put together. Do not treat them as the style to imitate.
 
+## Build a Rube Goldberg chain
+
+The creative goal is an elaborate chain of different kinetic actions that accomplishes a simple task. Getting the ball from entrance to exit is the shared handoff requirement; it is not the whole invention. A route made mostly of ramps and bounces is a marble run, even if it has elaborate scenery.
+
+Make other objects do real work. Combine at least three distinct kinds of action, such as tipping a lever, toppling dominoes, pulling a cord, lifting a counterweight, releasing a spring, turning a wheel, or opening a trapdoor. Each stage must cause the next. Several ramps, several bumpers, or several versions of the same bounce do not count as varied mechanisms. Ramps can connect the inventions, but should not dominate the scene.
+
+For example: the ball tips a lever, the lever starts a short domino cascade, the last domino releases a counterweight, and the weight pulls open a gate just as the rolling ball arrives. The ball then rings a bell and rolls into the shared catch. This illustrates cause and effect, not a required design or visual style. Invent a chain that belongs in my world, with a clear small payoff before the handoff.
+
+The ball can start a mechanism and continue moving while other objects carry the action forward. It does not need to touch every stage. Keep the same shared ball, the time window, and the movement rules below; design compact, overlapping actions rather than parking the ball while a long sequence plays out.
+
 ## Start with a conversation
 
 Read this whole brief before asking me anything. If I have not already described my scene, invite me to describe it in my own words. For example: "What kind of world should the ball travel through, and what would you like to happen along the way?" Do not ask me to complete a form or fill in this file.
@@ -24,12 +34,12 @@ Use my description and anything I have already told you to understand:
 
 - The world and its visual style.
 - Whether the physics should be believable or can include magic.
-- Two or three mechanisms the ball should go through.
+- The simple task the machine will accomplish, and a varied chain of mechanisms that causes it to happen.
 - How the world reacts when the ball hits things, including sound.
 
 Ask follow-up questions only where something is missing or unclear and the answer would affect the scene. Ask one or two questions at a time; do not repeat questions I have already answered or turn the conversation into a questionnaire. Help me develop an incomplete idea, and explain any conflicts with the shared contract below.
 
-Suggest a short scene name using lowercase letters and digits for the file name, and ask what name I want in the scene's author credit if you do not already know it. Once you understand enough to begin, briefly describe the scene you will build and start with the bare mechanisms, following "How I want to work" below. Refine the details with me as we go.
+Suggest a short scene name using lowercase letters and digits for the file name, and ask what name I want in the scene's author credit if you do not already know it. Once you understand enough to begin, briefly describe the causal chain (what sets each stage in motion and what it triggers next), then start with the bare mechanisms, following "How I want to work" below. Refine the details with me as we go.
 
 ## What is up to me
 
@@ -70,7 +80,7 @@ The libraries are p5.js 1.11.11 and Matter.js 0.20.0, already loaded. Do not add
 
 ### The same every time
 
-A scene that passes ten times and strands the ball on the eleventh will do it in front of the audience. It is also impossible to fix a stuck ball that you cannot make happen again. So:
+A scene that passes ten times and strands the ball on the eleventh will do it in front of the audience. It is also impossible to fix a stuck ball that you cannot make happen again. Repeatable physics does not mean a pre-timed performance. The same starting conditions and the same physical interactions should produce the same result. Trigger dependent stages from the preceding action, not from a schedule that runs whether or not anything reached them.
 
 **A hard rule: anything that affects the ball is repeatable.** That means where bodies are, how they move, and when anything happens to the ball. For all of that:
 
@@ -144,11 +154,11 @@ The machine plays background music under every scene, so a few well-placed sound
 
 ## The scene should react
 
-The ball passing through should change the world. Each collision should cause something I can see, and ideally something I can hear, whether that is a note or a recorded sound. Use `h.speed`, so a hard hit looks and sounds different from a light one.
+The chain should visibly transfer motion between objects. A flash, sound, or decorative animation is feedback; it does not replace a mechanism that causes the next stage to happen. Each collision should cause something I can see, and ideally something I can hear, whether that is a note or a recorded sound. Use `h.speed`, so a hard hit looks and sounds different from a light one.
 
-## A scene that already works
+## Optional handoff test: Three Ramps
 
-This passes as written, at 8.6 seconds, which is near the short end of the window; a finished scene should run closer to 10. It is a safe place to start: save it as the scene file, add its line to `index.html`, check that it passes, then change it into my scene.
+This example tests the scene API, ball route, and shared handoff. It passes the transport test at 8.6 seconds, but it does **not** meet the creative requirement for a finished Rube Goldberg scene. Use it only if you need to diagnose the handoff or learn the API. Do not use its ramp layout as the default design for my scene. Start the creative build from our mechanism chain instead; aim for about 10 seconds overall.
 
 ```js
 /* MYSCENE — Your Name — "Three Ramps"
@@ -210,7 +220,8 @@ This passes as written, at 8.6 seconds, which is near the short end of the windo
 ## How I want to work
 
 - **You cannot see the canvas, and I can.** After each change, tell me what I should see in the Live Server preview. I will tell you what happened. If you can open a browser yourself, check the scene through Live Server before you tell me it works.
-- **Work in small steps.** First get the ball from the pipe to the catch zone with bare mechanisms, and check the time. Then build the look. Then add reactions and sound. Do not write the whole scene in one go.
+- **Work in small steps.** First sketch the causal chain in words: trigger → mechanism → next mechanism → simple payoff → ball handoff. Build and test the bare mechanisms one connection at a time, so each stage actually sets off the next. Check the full chain and timing before adding the detailed world, visual feedback, and sound. Do not write the whole scene in one go.
+- **Let the mechanisms work.** For believable physics, use collisions, gravity, pivots, constraints, and stored energy to transfer motion. Show where added energy comes from, such as a falling weight, compressed spring, or motor. Do not move the ball along a scripted path, repeatedly steer its velocity, or fire stages at fixed timestamps to fake a successful chain. If it stalls or misses the time window, change the geometry, masses, mechanism, or chain length and test again. If I choose magic, its triggers must still form a readable cause-and-effect chain.
 - **Keep iterating with me.** The first working version is a starting point. After each version, invite me to watch it in Live Server and say what I like and what I want changed. Revise it from my feedback, have me watch the updated preview and refresh if needed, and repeat until I am happy with the scene and it meets the shared rules. My feedback can change the original idea as well as its details. A passing test alone does not mean we are finished.
 - **Make layout easy to tune.** Put the positions and sizes I am likely to adjust in named constants at the top of the file, as the starter scene does. If we are going back and forth on coordinates, stop guessing and ask me to read them off the debug view.
 - **Explain what I will have to explain.** When you use a physics technique that is not in the starter scene, tell me in two or three sentences what it does and why you chose it. I have to be able to explain my scene in class.
@@ -254,6 +265,8 @@ Check the readout after every change. Small layout changes can strand the ball.
 ## Done means
 
 - I have watched the scene in the Live Server preview and am happy with its look, movement, mechanisms, reactions, and sound.
+- At least three distinct kinds of kinetic action visibly cause one another and accomplish a simple task before the ball handoff. Other objects carry part of the action; ramps and bounces alone do not meet this requirement.
+- Each dependent stage waits for its actual trigger. The chain works through its mechanisms, rather than a timed sequence that would play without them.
 - In test mode the scene ends with PASS, with the same time on every run, and never LOST or STUCK.
 - The browser console shows no errors, including after a restart.
 - The scene's line is in `index.html`, and that is the only change there.
