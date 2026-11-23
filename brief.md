@@ -1,6 +1,6 @@
 # Scene brief — Class Rube Goldberg Machine
 
-**How to use this.** Give this whole file to your AI assistant, in a mode where it can read and edit the files in the project folder. Ask it to read the brief and guide you through creating your scene. It will invite you to describe what you want and ask follow-up questions as needed. You do not need to fill in or edit this file. Open `index.html` in a browser to run the scene it builds with you.
+**How to use this.** Give this whole file to your AI assistant, in a mode where it can read and edit the files in the project folder. Ask it to read the brief and guide you through creating your scene. It will invite you to describe what you want and ask follow-up questions as needed. You do not need to fill in or edit this file. Open `index.html` in a browser to run the scene it builds with you. Watch it, tell the assistant what you want to change, then refresh and watch its revision. Repeat until you have the scene you want and it meets the shared rules.
 
 You do not set anything up by hand. Your assistant creates your scene file and adds it to `index.html` as part of the build.
 
@@ -8,7 +8,7 @@ If you are writing the scene yourself, without an assistant, everything you need
 
 ---
 
-I'm building one scene of a class Rube Goldberg machine in p5.js and Matter.js, and I'd like your help building it.
+I'm creating one scene of a class Rube Goldberg machine, and I'd like your help building and refining it.
 
 Every student builds one scene. The same ball travels through all of them: it enters my scene from a pipe at the top left and leaves through a lift at the bottom right. The scenes are played back to back for an audience, so my scene has two jobs. It has to hand the ball on exactly as this brief says, or the machine breaks at my scene. And it has to be fun to watch and recognizably mine.
 
@@ -209,8 +209,9 @@ This passes as written, at 8.6 seconds, which is near the short end of the windo
 
 - **You cannot see the canvas, and I can.** After each change, tell me which URL to open and what I should see. I will tell you what happened. If you can open a browser yourself, run it and check before you tell me it works.
 - **Work in small steps.** First get the ball from the pipe to the catch zone with bare mechanisms, and check the time. Then build the look. Then add reactions and sound. Do not write the whole scene in one go.
+- **Keep iterating with me.** The first working version is a starting point. After each version, invite me to watch it and say what I like and what I want changed. Revise it from my feedback, have me refresh and watch again, and repeat until I am happy with the scene and it meets the shared rules. My feedback can change the original idea as well as its details. A passing test alone does not mean we are finished.
 - **Make layout easy to tune.** Put the positions and sizes I am likely to adjust in named constants at the top of the file, as the starter scene does. If we are going back and forth on coordinates, stop guessing and ask me to read them off the debug view.
-- **Explain what I will have to explain.** When you use a Matter.js technique that is not in the starter scene, tell me in two or three sentences what it does and why you chose it. I have to be able to explain my scene in class.
+- **Explain what I will have to explain.** When you use a physics technique that is not in the starter scene, tell me in two or three sentences what it does and why you chose it. I have to be able to explain my scene in class.
 - **Tell me when my idea has a problem.** If a mechanism is unlikely to work, or will not fit in the time, say so and suggest the closest thing that will.
 
 ## Testing
@@ -250,6 +251,7 @@ Check the readout after every change. Small layout changes can strand the ball.
 
 ## Done means
 
+- I have watched the scene in the browser and am happy with its look, movement, mechanisms, reactions, and sound.
 - In test mode the scene ends with PASS, with the same time on every run, and never LOST or STUCK.
 - The browser console shows no errors, including after a restart.
 - The scene's line is in `index.html`, and that is the only change there.
